@@ -14,7 +14,7 @@ MyStruct create_stack_struct() {
 }
 
 MyStruct *create_heap_struct() {
-    MyStruct *my_struct = malloc(sizeof(MyStruct));
+    MyStruct *my_struct = calloc(1, sizeof(MyStruct));
     my_struct->a = 10;
     my_struct->b = 20;
     return my_struct;
@@ -55,14 +55,14 @@ int main() {
 
     // 2.2 Heap
 
-    MyStruct another_struct_for_pointer;
-    another_struct_for_pointer.a = 10;
-    another_struct_for_pointer.b = 20;
+    MyStruct* another_struct_for_pointer = create_heap_struct();
+    another_struct_for_pointer->a = 10;
+    another_struct_for_pointer->b = 20;
 
-    modify_struct_with_pointer(&another_struct_for_pointer);
+    modify_struct_with_pointer(another_struct_for_pointer);
 
-    printf("The value of my_struct.a is: %d \n", another_struct_for_pointer.a);
-    printf("The value of my_struct.b is: %d \n", another_struct_for_pointer.b);
+    printf("The value of my_struct->a is: %d \n", another_struct_for_pointer->a);
+    printf("The value of my_struct->b is: %d \n", another_struct_for_pointer->b);
 
     // Cuando una funcion recibe una valor de input, este valor es copiado en el stack de la funcion.
     // Por lo que cualquier modificacion que se haga a este valor dentro de la funcion, no afectara al valor original.

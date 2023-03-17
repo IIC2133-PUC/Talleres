@@ -61,10 +61,10 @@ int main() {
     for (int i = 0; i < TRAIN_COUNT; i++) {
         Train* train = trains[i];
 
-        for (int i = 0; i < WAGON_COUNT; i++) {
-        Wagon* wagon = create_wagon(i, 100 * train->id);
+        for (int j = 0; j < WAGON_COUNT; j++) {
+            Wagon* wagon = create_wagon((j+1) * i, train->id);
 
-        insertWagon(train, wagon);
+            insertWagon(train, wagon);
         }
     }
 
@@ -77,7 +77,7 @@ int main() {
         printf("Train %d: ", train->id);
 
         while (wagon != NULL) {
-            printf("%d ", wagon->id);
+            printf("%d ->", wagon->id);
             wagon = wagon->next;
         }
 

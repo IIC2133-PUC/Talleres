@@ -5,4 +5,5 @@
 - [Capsula Binary Search Tree en C](https://youtu.be/j9W1qKCvFRE)
 - [Capsula Tablas de Hash en C](https://youtu.be/P1DOE8W_RD4)
 - [Capsula DFS-ST](https://youtu.be/tJV3CV0edl0)
-- [Capsula MinHeap en C](https://youtu.be/LYe67zvL9vY)c
+- [Capsula MinHeap en C](https://youtu.be/LYe67zvL9vY)
+- [Capsula Programación Dinámica](https://youtu.be/QFqwAw414yY)
